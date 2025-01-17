@@ -1,0 +1,400 @@
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    body {
+        font-family: 'Poppins', sans-serif;
+        background-color: #f9f9f9;
+    }
+    .container {
+        max-width: 900px;
+        margin: auto;
+        padding: 30px;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        display: block;
+    }
+    .header {
+        background-color: #0056b3;
+        color: #fff;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        grid-column: span 2;
+        border-radius: 2.5%;
+    }
+    .header .logo-container {
+        background-color: #fff;
+        padding: 10px;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .header .operations-weekly {
+        flex: 1;
+    }
+    .header h2 {
+        margin: 0;
+        font-size: 24px;
+    }
+    .logo {
+        width: 100px;
+        height: auto;
+    }
+    .section {
+        margin-top: 20px;
+        flex: none;
+        page-break-before: always;
+    }
+    .section h5 {
+        color: #333;
+        margin-bottom: 15px;
+        font-weight: bold;
+        font-size: 18px;
+    }
+    .section ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    .section ul li {
+        margin-bottom: 15px;
+        padding: 15px;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        width: calc(100% - 30px);
+        box-sizing: border-box;
+    }
+    .section ul li::before {
+        content: "";
+        color: #4CAF50;
+        margin-right: 15px;
+        font-weight: bold;
+        font-size: 18px;
+    }
+    .priority-list ul li::before {
+        content: "";
+    }
+
+    .action-items ul li::before {
+        content: "";
+    }
+
+    .updates ul li::before {
+        content: "";
+    }
+    .priority-list, .action-items, .updates {
+        height: 100%;
+    }
+    .combined-section {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        height: 100%;
+    }
+    .priority-list h5, .action-items h5, .updates h5 {
+        font-size: 18px;
+    }
+    .priority-list ul li::before, .action-items ul li::before, .updates ul li::before {
+        font-size: 18px;
+    }
+    .open-items ul li::before {
+        content: "";
+    }
+    .action-items ul, .priority-list ul, .updates ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .action-items ul li, .priority-list ul li, .updates ul li {
+        padding-left: 0;
+    }
+
+    .updates ul {
+        list-style-type: disc;
+        padding-left: 20px;
+    }
+    .action-items ul {
+        list-style-type: disc;
+        padding-left: 20px;
+    }
+    .priority-list ul {
+        list-style-type: disc;
+        padding-left: 20px;
+    }
+    .status-in-progress {
+        color: #ff4000; 
+    }
+    .status-in-business-user-confirmation {
+        color: #ff9d00; 
+    }
+    .status-in-review {
+        color: #007BFF; 
+    }
+    .status-datamigration {
+        color: #de2d2d; 
+    }
+
+    
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        background-color: #fff;
+        margin: 20px 0;
+    }
+    th {
+        background-color: #0056b3; 
+        color: #fff; 
+        text-align: center; 
+    }
+    td:nth-child(1), td:nth-child(2), td:nth-child(5) {
+        text-align: center;
+    }
+    td:nth-child(3) {
+        width: 40%; 
+    }
+    td:nth-child(4) {
+        width: 20%; 
+    }
+    td:nth-child(6), td:nth-child(7) {
+        width: 10%; 
+        text-align: center; 
+    }
+    tr:nth-child(even) {
+        background-color: #f2f2f2; 
+    }
+    tr:nth-child(odd) {
+        background-color: #ffffff; 
+    }
+    td:nth-child(6) {
+        text-align: center;
+    }
+
+    @media print {
+        body {
+            -webkit-print-color-adjust: exact; 
+            color-adjust: exact; 
+            margin: 0; 
+            padding: 0; 
+        }
+        .container {
+            box-shadow: none; 
+            margin: 0; 
+            padding: 5px; 
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            background-color: #fff; 
+            margin: 0; 
+        }
+        th, td {
+            border: 1px solid #000; 
+            padding: 3px; 
+            font-size: 10px; 
+        }
+        tr {
+            page-break-inside: avoid; 
+        }
+       
+        tr:nth-child(8) {
+            page-break-inside: avoid; 
+        }
+       
+        .no-print {
+            display: none; 
+        }
+        
+        h2, h5 {
+            margin: 2px 0; 
+        }
+        p {
+            margin: 2px 0; 
+        }
+       
+        .section {
+            page-break-after: avoid; 
+            margin-top: 10px; 
+        }
+      
+        .header {
+            background-color: #0056b3; 
+            color: #fff; 
+            padding: 10px; 
+            margin-bottom: 10px;
+        }
+        
+        table {
+            page-break-inside: avoid; 
+            margin-bottom: 10px; 
+        }
+    }
+
+    .section.open-items {
+        margin-top: 20px;
+        flex: none;
+        page-break-before: always; 
+    }
+
+    
+    .section.open-items table tbody tr td:nth-child(4) {
+        text-align: center; 
+    }
+    .priority-icon {
+        display: inline-block;
+        width: 30px; 
+        height: 30px; 
+        border-radius: 50%; 
+        background-color: #de4402; 
+        color: white;
+        text-align: center; 
+        line-height: 30px; 
+        font-weight: bold; 
+    }
+    .priority-icon2 {
+        display: inline-block;
+        width: 30px; 
+        height: 30px; 
+        border-radius: 50%; 
+        background-color: #f76121; 
+        color: white; 
+        text-align: center; 
+        line-height: 30px; 
+        font-weight: bold; 
+    }
+    .priority-icon3 {
+        display: inline-block;
+        width: 30px; 
+        height: 30px; 
+        border-radius: 50%; 
+        background-color: #d58768; 
+        color: white; 
+        text-align: center; 
+        line-height: 30px; 
+        font-weight: bold; 
+    }
+    .priority-icon4 {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%; 
+        background-color: #e09879; 
+        color: white;
+        text-align: center; 
+        line-height: 30px; 
+        font-weight: bold; 
+    }
+    .status-on-hold {
+        color: #ff4000; 
+        font-weight: bold;
+    }
+    .status-ticket-in-progress {
+        color: #007BFF;
+        font-weight: bold;
+    }
+    .status-business-user-confirmation {
+        color: #ff9d00; 
+        font-weight: bold;
+    }
+    .status-release-assigned {
+        color: #28a745; 
+        font-weight: bold;
+    }
+    .status-default {
+        color: #000; 
+    }
+</style>
+</style>
+
+<div class="container">
+    <div class="header">
+        <div class="logo-container">
+            <img src="NO_Image.png" alt="Logo" class="logo">
+        </div>
+        <div class="operations-weekly">
+            <h2>Retrospective Session Recap | R15</h2>
+        </div>
+    </div>
+    <div class="section overview">
+        <h5><span class="overview-icon">📊</span> Overview</h5>
+        <p>This session marks the kickoff of our retrospectives, aimed at fostering continuous improvement in how we deliver fixes/enhancements. Our primary focus is to enhance overall product delivery processes, ensuring they are efficient, collaborative, and aligned with our goal of providing high-quality outcomes to our end users. By reflecting on what’s working well and identifying areas for improvement, we aim to establish a strong foundation for ongoing success.</p>
+        <table>
+            <tbody>
+                <tr>
+                    <td style="border: 1px solid rgb(182, 182, 182); background-color: #f2f2f2; text-align: left;">Date</td>
+                    <td style="border: 1px solid rgb(182, 182, 182); background-color: #ffffff;">01/17/2025</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid rgb(182, 182, 182); background-color: #f2f2f2; text-align: left; vertical-align: top;">Participants</td>
+                    <td style="border: 1px solid rgb(182, 182, 182); background-color: #ffffff;">Simon Uribe <br>
+                        Michelle Calderon <br>
+                        Neha Rustagi <br>
+                        Rahul Roy <br>
+                        Ram Kumar <br>
+                        Roma Kishnani <br>
+                        Caro Rocha</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid rgb(182, 182, 182); background-color: #f2f2f2; text-align: left;">Next Retrospective</td>
+                    <td style="border: 1px solid rgb(182, 182, 182); background-color: #ffffff;">01/28/2025</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="section retrospective">
+        <h5><span class="retrospective-icon">🔄</span> Retrospective</h5>
+        <table style="border: 1px solid rgb(182, 182, 182); border-collapse: collapse;">
+            <thead>
+                <tr>
+                    <th style="background-color: #7fbd7f; border: 1px solid grey;">Start Doing</th>
+                    <th style="background-color: #f49290; border: 1px solid grey;">Stop Doing</th>
+                    <th style="background-color: #70b7cf; border: 1px solid grey;">Keep Doing</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="background-color: #ffffff; text-align: left; vertical-align: top;">
+                    <td style="border: 1px solid rgb(182, 182, 182);">Avoiding Last-Minute Changes and Late-Night Staging Deployments Before Production Release</td>
+                    <td style="border: 1px solid rgb(182, 182, 182);">Multiple emails/communication going on from multiple stakeholders. It should be a streamlined through a single channel</td>
+                    <td style="border: 1px solid rgb(182, 182, 182);">Continue to have streamlined process of escalation of tickets with it’s respective level of detail.</td>
+                </tr>
+                <tr style="background-color: #ffffff; text-align: left; vertical-align: top;">
+                    <td style="border: 1px solid rgb(182, 182, 182);">We should focus on issues which are causing data issues, revenue loss or are business critical rather than new enhancements</td>
+                    <td style="border: 1px solid rgb(182, 182, 182);">Lot of troubleshooting requests are being received which also takes developer's & QA's time.</td>
+                    <td style="border: 1px solid rgb(182, 182, 182);">QA team to continue to capture opportunities before pushing to UAT so that UAT returns the less amount of FAIL items.</td>
+                </tr>
+                <tr style="background-color: #ffffff; text-align: left; vertical-align: top;">
+                    <td style="border: 1px solid rgb(182, 182, 182);">To inform which tickets won't make it to the release and the next steps for those.</td>
+                    <td style="border: 1px solid rgb(182, 182, 182);"></td>
+                    <td style="border: 1px solid rgb(182, 182, 182);"></td>
+                </tr>
+                <tr style="background-color: #ffffff; text-align: left; vertical-align: top;">
+                    <td style="border: 1px solid rgb(182, 182, 182);">Push back tickets that are too general and require more detailed information from stakeholders.</td>
+                    <td style="border: 1px solid rgb(182, 182, 182);"></td>
+                    <td style="border: 1px solid rgb(182, 182, 182);"></td>
+                </tr>
+                <tr style="background-color: #ffffff; text-align: left; vertical-align: top;">
+                    <td style="border: 1px solid rgb(182, 182, 182);">Ecom Team should implement a basic level of code review/technical review within their team. Assign someone from the team with the appropriate rights to merge pull requests (PRs) to prevent release delays caused by timezone differences.</td>
+                    <td style="border: 1px solid rgb(182, 182, 182);"></td>
+                    <td style="border: 1px solid rgb(182, 182, 182);"></td>
+                </tr>
+                <tr style="background-color: #ffffff; text-align: left; vertical-align: top;">
+                    <td style="border: 1px solid rgb(182, 182, 182)">We need to gather and document detailed workflows for various project types, including static websites. The eComm team is responsible not only for the transactional http://StantonOptical.com  website but also for managing and maintaining non-transactional websites, ensuring clear processes and accountability across all platforms.</td>
+                    <td style="border: 1px solid rgb(182, 182, 182);"></td>
+                    <td style="border: 1px solid rgb(182, 182, 182);"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="section actionable-items">
+        <h5><span class="actionable-icon">✅</span> Actionable Items</h5>
+        <p>✔️ Inform users of the tickets that are assigned to current sprint, but are pushed out to a later release.</p>
+        <p>✔️ Someone in Simon’s team should be able to deploy releases in Dev and Stg env. to reduce time length due to time zone opportunities.</p>
+        <p>✔️ Neha to share documentation on branching and versioning to Simon’s team to improve overall process.</p>
+        <p>✔️ MF team will start to direct any email communication to be pushed thru official escalation process to ensure consistency.</p>
+
+    </div>
+</div>
+
+<script>
+    document.getElementById("current-date").innerHTML = new Date().toLocaleDateString();
+</script>
